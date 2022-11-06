@@ -28,7 +28,7 @@
 
     // Setting up images
     imgElement.src=movies[slideIndex].image;
-    slideIndex++
+    slideIndex++;
 
     // Setting elements class names. PS: it should be exactly the same as the ones used in the CSS
     slide.className="slider";
@@ -58,8 +58,63 @@
     }
 
     // using set interval because we need the sliders to slide after some interval
-    setInterval(()=>{
+    setInterval(() => {
       createSlide();
     },3000);
   };
 
+  /* video cards */
+
+const videoCards = [...document.querySelectorAll(".video-card")];
+
+videoCards.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    let video = item.children[1];
+    video.play();
+  });
+  item.addEventListener("mouseleave", () => {
+    let video = item.children[1];
+    video.pause();
+  });
+});
+
+/* card sliders */
+
+let cardContainers = [...document.querySelectorAll(".card-container")];
+let preBtns = [...document.querySelectorAll(".pre-btn")];
+let nxtBtns = [...document.querySelectorAll(".nxt-btn")];
+
+cardContainers.forEach((item, i) => {
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+
+  nxtBtns[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth - 200;
+  });
+
+  preBtns[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth + 200;
+  });
+});
+
+const modal = document.querySelector(".modal");
+const loginBtn = document.querySelector(".login-link");
+const closeBtn = document.querySelector(".close");
+
+loginBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
+window.addEventListener("click", outsideClick);
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+function outsideClick(e) {
+  if (e.target == modal) {
+    closeModal();
+  }
+}
