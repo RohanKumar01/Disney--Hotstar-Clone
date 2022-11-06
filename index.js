@@ -63,23 +63,25 @@
     },3000);
   };
 
-  /* video cards */
 
-const videoCards = [...document.querySelectorAll(".video-card")];
+ // For Video cards
+ const videoCards = [...document.querySelectorAll(".video-card")];
 
-videoCards.forEach((item) => {
+ videoCards.forEach((item) => {
+  //JS for play and pause of video cards
   item.addEventListener("mouseover", () => {
     let video = item.children[1];
     video.play();
   });
+
   item.addEventListener("mouseleave", () => {
     let video = item.children[1];
     video.pause();
   });
 });
 
-/* card sliders */
 
+// Cards slider
 let cardContainers = [...document.querySelectorAll(".card-container")];
 let preBtns = [...document.querySelectorAll(".pre-btn")];
 let nxtBtns = [...document.querySelectorAll(".nxt-btn")];
