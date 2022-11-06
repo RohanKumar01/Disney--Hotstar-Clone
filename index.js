@@ -1,38 +1,4 @@
-//  Array of Names and descriptions of the movies  
-let movies = [
-    {
-      name: "falcon and the winter soldier",
-      des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia adipisci autem mollitia quidem totam.",
-      image: "images/slider 2.png"
-    },
-    {
-      name: "loki",
-      des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia adipisci autem mollitia quidem totam.",
-      image: "images/slider 1.png"
-    },
-    {
-      name: "wanda vision",
-      des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia adipisci autem mollitia quidem totam.",
-      image: "images/slider 3.png"
-    },
-    {
-      name: "raya and the last dragon",
-      des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia adipisci autem mollitia quidem totam.",
-      image: "images/slider 4.png"
-    },
-    {
-      name: "luca",
-      des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia adipisci autem mollitia quidem totam.",
-      image: "images/slider 5.png"
-    }
-  ];
-
-  const carousel=document.querySelector('.carousel');
+  const carousel=document.querySelector(".carousel");
   let sliders=[]; // Empty array 
 
   let slideIndex=0; //  Variable to Track the current slide
@@ -44,11 +10,11 @@ let movies = [
     }
 
     // Create DOM Elements
-    let slide= document.createElement('div');
-    let imgElement= document.createElement('img');
-    let content= document.createElement('div');
-    let h1= document.createElement('h1');
-    let p= document.createElement('p');
+    let slide= document.createElement("div");
+    let imgElement= document.createElement("img");
+    let content= document.createElement("div");
+    let h1= document.createElement("h1");
+    let p= document.createElement("p");
 
     // Attacing all the elements
     imgElement.appendChild(document.createTextNode(''));
@@ -80,8 +46,7 @@ let movies = [
       // Afer that we multiply 100 with the calculations because we want 100 -100% per slide. Now, we subtract 2 from slider.lenggth because we want second slide to be in the middle and we will subtract this margin value from this 100%. we are doing the same here with the 30 part becuase we have 30 px magin on the right.
 
       if(sliders.length){
-        sliders[0].style.marginLeft = `calc(-${100* (sliders.length - 2)}% - ${30 *(sliders.length - 2)}
-        px)`;
+        sliders[0].style.marginLeft = `calc(-${100 * (sliders.length - 2)}% - ${30 * (sliders.length - 2)}px)`;
       }
     };
 

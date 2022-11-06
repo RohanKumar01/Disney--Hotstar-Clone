@@ -41,7 +41,7 @@ body{
     list-style: none;
 }
 
-.nav-items a{
+.nav-items a { 
 
     /* We do not want hyper links to be blue so, text-decoration is set to none */
     text-decoration: none;
