@@ -41,15 +41,14 @@ let sliders = []; // Empty array
     sliders.push(slide);
 
     // Adding Slide effect of the slider
-    if(slider.length)
-    {
-      // Negative after calc is beacause we want negative left margin and the hundered because we want the slider  to go 100% of the screen. 
+
+     // Negative after calc is beacause we want negative left margin and the hundered because we want the slider  to go 100% of the screen. 
       // Afer that we multiply 100 with the calculations because we want 100 -100% per slide. Now, we subtract 2 from slider.lenggth because we want second slide to be in the middle and we will subtract this margin value from this 100%. we are doing the same here with the 30 part becuase we have 30 px magin on the right.
-
-      sliders[0].style.marginLeft = `calc(-${100 * (sliders.length - 2)}% - ${
-        30 * (sliders.length - 2)
-      }px)`;
-
+      if (sliders.length) {
+        sliders[0].style.marginLeft = `calc(-${100 * (sliders.length - 2)}% - ${
+          30 * (sliders.length - 2)
+        }px)`;
+      }
     };
 
     // Since, we need to call this function more than one times because we need the sliding effect
@@ -63,7 +62,6 @@ let sliders = []; // Empty array
     setInterval(() => {
       createSlide();
     },3000);
-  };
 
 
  // For Video cards

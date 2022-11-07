@@ -45,10 +45,10 @@ body{
     text-decoration: none;
     margin-left: 20px;
 
-    /* To make words capital that */
+    /* To make words capital */
     text-transform: capitalize;
     color: #fff;
-    /* opacity: 0.9; */ 
+    opacity: 0.9; 
 }
 
 .right-container{
@@ -172,6 +172,7 @@ body{
 
 
 /* For Video Cards */
+
 .video-card-container{
     position: relative;
     width: 92%;
@@ -296,7 +297,8 @@ body{
 }
 
  /* For watchlist button */
- .watchlist-btn{
+ 
+.watchlist-btn{
     position: relative;
     width: 100%;
     text-transform: capitalize;
