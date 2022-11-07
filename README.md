@@ -11,12 +11,12 @@ This website is clone of Disney+ hotstar landing page
 
 ## Navbar and Slider 
 
-<img src="images/preview1.png">
+<img src="images/preview1.png" width=800px height = 400px>
 
 
 ## Recommended and New shows section
 
-<img src="images/preview2.png">
+<img src="images/preview2.png" width=800px height = 400px>
 
 
 ## Login form
