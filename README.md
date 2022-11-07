@@ -21,4 +21,4 @@ This website is clone of Disney+ hotstar landing page
 
 ## Login form
 
-<img src="images/preview3.png" width=900px height = 600px>
+<img src="images/preview3.png" width=900px height = 400px>
